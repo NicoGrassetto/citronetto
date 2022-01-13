@@ -1,13 +1,11 @@
 # Citronetto - A general purpose and study bot
 Citronetto is a Discord bot whose main features place the user's wellbeing at the very centre. We believe that quality should be privileged over quantity and in that spirit the bot's features put an equal emphasis on social activities as on producitivty. Created for Lemonsalt's community on Discord, the bot will be made publicly available after the alpha release.
 
-[**Invite StudyLion here**](https://discord.studylions.com/invite "here"), and get started with `!help`.
-Join the [**support server**](https://discord.gg/studylions "support server") or start a [**discussion**](https://github.com/StudyLions/StudyLion/discussions "disscussion") if you have any questions or issues.
+[**Invite Citronetto here** (coming soon)]("here"), and get started with `/help`.
 
-## Philosophy
+## 💭 Philosophy
 ------------
-We strive for balance between hard cram work evenings, socialising and having fun. 
-In the past couple of years, we noticed a new trend on Discord – instead of being a platform designed only for gamers, many students joined it as well, forming communities dedicated to studying and working together.
+We strive for balance between hard cramming work evenings and social life during the pandemic. Lately 
 I have a study community myself called [The Study Lions](http://discord.gg/studylions "The Study Lions"). 
 
 The community members decided to raise funds and hire an amazing developer that created our own unique study/productivity bot. 
@@ -18,7 +16,7 @@ Over the months we got many suggestions so we kept updating and adding more and 
 
 I decided to invest further and make the bot public and open-source, so more study servers will be able to enjoy it as well, this way we can connect all study servers and create a network of students.
 
-### 📙 Features
+## 📙 Features
 ------------
 StudyLion has the following primary features:
 - **Camera only study rooms**  
@@ -46,7 +44,7 @@ Reward users for studying, allow them to use the coins to buy private study room
 Punish cheaters, audit-log, welcome message, and so much more using our full-scale moderation system.
 
 
-### ❓ Tutorials
+## ❓ Tutorials
 ------------
 A command list and general documentation for StudyLion may be found using the `!help` command, and documentation for a specific command, e.g. `config`, may be found with `!help config`.
 Make sure to check the [full documentation](https://www.notion.so/izabellakis/StudyLion-Bot-Tutorials-f493268fcd12436c9674afef2e151707 "StudyLion Tutorial") to stay updated.
