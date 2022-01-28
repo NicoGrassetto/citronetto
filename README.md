@@ -10,18 +10,11 @@ Citronetto is a Discord bot whose main features place the user's wellbeing at th
 We strive for balance between hard cramming work evenings and social life during the pandemic. 
 Join our study community on [Discord](https://discord.gg/XFv6cYQQfv). 
 
-The community members decided to raise funds and hire an amazing developer that created our own unique study/productivity bot. 
-
-As soon as we published the bot, hundreds of new students made their first step and started using our virtual study rooms as well!
-
-Over the months we got many suggestions so we kept updating and adding more and more features to the bot!
-
-I decided to invest further and make the bot public and open-source, so more study servers will be able to enjoy it as well, this way we can connect all study servers and create a network of students.
 
 ## 📙 Features
 ------------
 Citronetto has the following primary features:
-- **Advanced study room systems with many features to come**  
+- **Advanced study room system with many features to come**  
 Set specific channels to force users to use their webcam to study. 
 - **To-Do List**
 Users can create and share their own to-do lists, and get rewards when completing a task!
