@@ -14,12 +14,10 @@ Join our study community on [Discord](https://discord.gg/XFv6cYQQfv).
 ## 📙 Features
 ------------
 Citronetto has the following primary features:
-- **Advanced study room system with many features to come**  
-Set specific channels to force users to use their webcam to study. 
+- **Advanced study room system**
+With many features to come  
 - **To-Do List**
-Users can create and share their own to-do lists, and get rewards when completing a task!
--  **Reminders**
-Users can set their own private reminders, to drink water, stretch, or anything else they want to remember, every X minutes, hours, days, or maybe even just once.
+With many features to come.
 
 ## 📙 Features to be implemented and ideas
 ------------
