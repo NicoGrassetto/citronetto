@@ -27,6 +27,22 @@ Set specific channels to force users to use their webcam to study.
 Users can create and share their own to-do lists, and get rewards when completing a task!
 -  **Reminders**
 Users can set their own private reminders, to drink water, stretch, or anything else they want to remember, every X minutes, hours, days, or maybe even just once.
+
+## 📙 Features to be implemented and ideas
+------------
+- Camera only channels
+- Private pomo timers
+- Deep focus mode (No notifications)
+- Link the server to Disboard and implement a bump reminder.
+- Moderation logs
+- Choose your field of study: Add a role related to your field of study and/ or your professional status.
+- Schedule a study session with your friends and or your study gang and get rewarded.
+- Channel to find a study buddy (in case you are not automatically matched) using a recommender system.
+- A rich presence extension for **your** Discord displaying your TODO list
+- **💧 Drink Water Alert** reminding you to drink water every 60 minutes.
+- Birthday message
+- Language game invented by @ian#7518
+- Love rate on the server based on emojis and messages.
 <!---
 - **Accountability Rooms**
 This feature allows the users to use their coins to schedule a time to study at.
