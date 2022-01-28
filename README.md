@@ -58,6 +58,7 @@ Users can set their own private reminders, to drink water, stretch, or anything 
 - Add an audio alert for the pomo timer.
 - Personal study rooms (for subscribers?) via a channel creator. Subscribers get to create a study room of maximum (4?) people. The channel's admin can accept and manage the access rights to the channel.
 - Privacy mode for the todo list
+- Each person earns (money?) by getting reactions to his message(s). Each reaction has a different weight depending on the emote.
 <!---
 - **Accountability Rooms**
 This feature allows the users to use their coins to schedule a time to study at.
