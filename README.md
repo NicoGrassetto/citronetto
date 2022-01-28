@@ -1,6 +1,6 @@
 ![alt text](892759037853179964.webp)
 # Citronetto - A general purpose and study bot
-Citronetto is a Discord bot whose main features place the user's wellbeing at the very centre. We believe that quality should be privileged over quantity and in that spirit the bot's features put an equal emphasis on social activities as on producitivty. Created for Lemonsalt's community on Discord, the bot will be made publicly available after the alpha release.
+Citronetto is a Discord bot whose main features place the user's wellbeing at the very centre. We believe that quality should be privileged over quantity and in that spirit the bot's features put an equal emphasis on social activities as on productivity. Created for Lemonsalt's community on Discord, the bot will be made publicly available after the alpha release.
 
 [**Invite Citronetto here** (coming soon)](), and get started with `/help`.
 
@@ -19,13 +19,14 @@ I decided to invest further and make the bot public and open-source, so more stu
 
 ## 📙 Features
 ------------
-StudyLion has the following primary features:
-- **Camera only study rooms**  
+Citronetto has the following primary features:
+- **Advanced study room systems with many features to come**  
 Set specific channels to force users to use their webcam to study. 
 - **To-Do List**
 Users can create and share their own to-do lists, and get rewards when completing a task!
 -  **Reminders**
 Users can set their own private reminders, to drink water, stretch, or anything else they want to remember, every X minutes, hours, days, or maybe even just once.
+<!---
 - **Accountability Rooms**
 This feature allows the users to use their coins to schedule a time to study at.
 Not attending prevents everyone in the room from getting the bonus.
@@ -44,8 +45,7 @@ Reward users for studying, allow them to use the coins to buy private study room
 - **Full-Scale Moderation System**
 Punish cheaters, audit-log, welcome message, and so much more using our full-scale moderation system.
 
-
 ## ❓ Tutorials
 ------------
 A command list and general documentation for StudyLion may be found using the `!help` command, and documentation for a specific command, e.g. `config`, may be found with `!help config`.
-Make sure to check the [full documentation](https://www.notion.so/izabellakis/StudyLion-Bot-Tutorials-f493268fcd12436c9674afef2e151707 "StudyLion Tutorial") to stay updated.
+Make sure to check the [full documentation](https://www.notion.so/izabellakis/StudyLion-Bot-Tutorials-f493268fcd12436c9674afef2e151707 "StudyLion Tutorial") to stay updated.--->
