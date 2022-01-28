@@ -2,12 +2,12 @@
 # Citronetto - A general purpose and study bot
 Citronetto is a Discord bot whose main features place the user's wellbeing at the very centre. We believe that quality should be privileged over quantity and in that spirit the bot's features put an equal emphasis on social activities as on productivity. Created for Lemonsalt's community on Discord, the bot will be made publicly available after the alpha release.
 
-[**Invite Citronetto here** (coming soon)](), and get started with `/help`.
+[**Invite Citronetto here** (coming soon)](https://www.lemonsalt.studio/), and get started with `/help`.
 
 ## 💭 Philosophy
 ------------
-We strive for balance between hard cramming work evenings and social life during the pandemic. Lately 
-I have a study community myself called [The Study Lions](http://discord.gg/studylions "The Study Lions"). 
+We strive for balance between hard cramming work evenings and social life during the pandemic. 
+Join our study community on [Discord](https://discord.gg/XFv6cYQQfv). 
 
 The community members decided to raise funds and hire an amazing developer that created our own unique study/productivity bot. 
 
