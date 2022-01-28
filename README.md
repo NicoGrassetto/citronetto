@@ -1,4 +1,4 @@
-![alt text](logo-1.png =100x20)
+<img src="https://media.discordapp.net/attachments/812014361752895529/931258758082998324/Opera_senza_titolo_80.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
 # Citronetto - A general purpose and study bot
 Citronetto is a Discord bot whose main features place the user's wellbeing at the very centre. We believe that quality should be privileged over quantity and in that spirit the bot's features put an equal emphasis on social activities as on productivity. Created for Lemonsalt's community on Discord, the bot will be made publicly available after the alpha release.
 
