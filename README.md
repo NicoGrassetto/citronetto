@@ -43,6 +43,7 @@ Users can set their own private reminders, to drink water, stretch, or anything 
 - Birthday message
 - Language game invented by @ian#7518
 - Love rate on the server based on emojis and messages.
+- Language roles
 <!---
 - **Accountability Rooms**
 This feature allows the users to use their coins to schedule a time to study at.
