@@ -50,6 +50,12 @@ Users can set their own private reminders, to drink water, stretch, or anything 
 - Study rooms with custom musics (lofi, hogwards, ...)
 - Message at the end of the day with server statistics.
 - Announcements linked to LemonSalt's channel.
+- Community emotes system: each member can add an emote to the server's emotes and it will be placed in a priority queue. Every now and then (to be defined) the emote with the least used will be replaced by the firt emote in the priority queue.
+- Create statistics of who likes who based on server's messages and activity.
+- Implement drinking games or link them through a channel
+- Topic analysis system that changes the channel's name according to the topic.
+- Provide an UI for mods (for example for manual announcements)
+- Add an audio alert for the pomo timer.
 <!---
 - **Accountability Rooms**
 This feature allows the users to use their coins to schedule a time to study at.
