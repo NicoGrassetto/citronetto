@@ -56,6 +56,7 @@ Users can set their own private reminders, to drink water, stretch, or anything 
 - Topic analysis system that changes the channel's name according to the topic.
 - Provide an UI for mods (for example for manual announcements)
 - Add an audio alert for the pomo timer.
+- Personal study rooms (for subscribers?) via a channel creator. Subscribers get to create a study room of maximum (4?) people. The channel's admin can accept and manage the access rights to the channel.
 <!---
 - **Accountability Rooms**
 This feature allows the users to use their coins to schedule a time to study at.
