@@ -49,6 +49,7 @@ Users can set their own private reminders, to drink water, stretch, or anything 
 - Bug & Feature command / channel to report a bug or possible improvements.
 - Study rooms with custom musics (lofi, hogwards, ...)
 - Message at the end of the day with server statistics.
+- Announcements linked to LemonSalt's channel.
 <!---
 - **Accountability Rooms**
 This feature allows the users to use their coins to schedule a time to study at.
