@@ -44,7 +44,11 @@ Users can set their own private reminders, to drink water, stretch, or anything 
 - Language game invented by @ian#7518
 - Love rate on the server based on emojis and messages.
 - Language roles
-- Get the time zone in a given country by typing /timezone <country name>
+- Get the time zone in a given country by typing /timezone <country name>.
+- Member profile displaying useful information.
+- Bug & Feature command / channel to report a bug or possible improvements.
+- Study rooms with custom musics (lofi, hogwards, ...)
+- Message at the end of the day with server statistics.
 <!---
 - **Accountability Rooms**
 This feature allows the users to use their coins to schedule a time to study at.
