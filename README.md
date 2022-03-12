@@ -19,7 +19,7 @@ With many features to come
 - **To-Do List**
 With many features to come.
 
-## 📙 Features to be implemented and ideas
+## 🎯 Roadmap
 ------------
 - [x] asdsa
 - Camera only channels
