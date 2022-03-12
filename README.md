@@ -21,6 +21,7 @@ With many features to come.
 
 ## 📙 Features to be implemented and ideas
 ------------
+- [x] asdsa
 - Camera only channels
 - Private pomo timers
 - Deep focus mode (No notifications)
