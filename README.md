@@ -68,6 +68,11 @@ Reward users based on their total study time, allow them to get better ranks, an
 Reward users for studying, allow them to use the coins to buy private study rooms, schedule accountability rooms, and even change their name's color.
 - **Full-Scale Moderation System**
 Punish cheaters, audit-log, welcome message, and so much more using our full-scale moderation system.
+- ❌-**💼Work Partner Feature**
+
+- Finds you a work partner for the day. You check on each other. Lasts for 8 hours.
+- How? Notify the bot when you want to be put into a queue. Finds you a match at random or of your chosing.
+- Improvements? Might find you a better partner depending on the person's time on the server and several parameters such as type of studies, roles, language etc
 
 ## ❓ Tutorials
 ------------
