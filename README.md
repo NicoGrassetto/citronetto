@@ -22,7 +22,7 @@ With many features to come.
 ## 🎯 Roadmap
 ------------
 - [x] asdsa
-- Camera only channels
+- [ ] Camera only channels
 - Private pomo timers
 - Deep focus mode (No notifications)
 - Link the server to Disboard and implement a bump reminder.
