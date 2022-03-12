@@ -96,6 +96,28 @@ Resource SYstem like on the science and tech where you scroll from page to page 
   Find a match on the server based on a mining of ID cards and messages + roles.
   Salary feature: For a given task a user / role gets money for as long as he is doing whatever he's supposed to do.
 Lottery system 
+ A platform game linked to the server's database where each member logs in with his Discord account and gets to earn rewards.
+ Ad system on the server where in exchange of real money or server points one can make an announcement of his choice (Discord server, twitch, whatever...)
+ Ban word: .ban <word>
+add the word to the txt file
++ bad language detection system.
+ Online world where each person on the server gets to have his character in the online world. As actions are performed the characters move and do actions in the world. For instance whenever there is someone switching from one room to anot her the character will perform the same action in the world. 
+ ⭐️  __Popularity Feature__:
+- Reactions to your message improve you popularity rate.
+- Tags improve your popularity rate.
+- Message rate after you sent a message improve your popularity rate. So basically analyse and detect when someone is the conversation / topic’s trigger.
+ Update for the online world -> Each person gets to buy stuff for his character like clothes and suchlike (also via Discord). After a while we can also implement a study system through the game itself.
+ Template modification: (more or less like on science and tech)
+
+- Welcome
+- Mission
+- Rules
+-library channel
+- information
+- arcade for external links
+ add a feature that allows the user to modify a message in the todo list.
+ **🍅 Pomodoro**
+.join: Whoever joins the pomo session will get notified whenever there's a break and will get a reward once the session is done.
 ## ❗️ Information
 ------------
 A command list and general documentation for Citronetto may be found using the `\help` command, and documentation for a specific command, e.g. `config`, may be found with `\help config`.
