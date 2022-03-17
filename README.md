@@ -45,8 +45,8 @@ With many features to come.
 - [ ] Topic analysis system that changes the channel's name according to the topic.
 - [ ] Provide a dashboard for mods.
 - [ ] Add an audio alert for the pomo timer.
-- [ ] Personal study rooms (for subscribers?) via a channel creator. Subscribers get to create a study room of maximum (4?) people. The channel's admin can accept and manage the access rights to the channel.
-- [ ] Privacy mode for the todo list
+- [ ] Personal study rooms (for subscribers?).
+- [ ] Privacy mode for the todo list.
 - [ ] Each person earns (money?) by getting reactions to his message(s). Each reaction has a different weight depending on the emote.
 - [ ] Work Partner Feature: Finds you a work partner for the day. You check on each other. Lasts for 8 hours.
 - [ ] Accountability Rooms: This feature allows the users to use their coins to schedule a time to study at. Not attending prevents everyone in the room from getting the bonus.
@@ -109,15 +109,10 @@ add the word to the txt file
  Update for the online world -> Each person gets to buy stuff for his character like clothes and suchlike (also via Discord). After a while we can also implement a study system through the game itself.
  Template modification: (more or less like on science and tech)
 
-- Welcome
-- Mission
-- Rules
--library channel
-- information
-- arcade for external links
- add a feature that allows the user to modify a message in the todo list.
- **🍅 Pomodoro**
-.join: Whoever joins the pomo session will get notified whenever there's a break and will get a reward once the session is done.
+
+[] Allow the user to modify a message in the todo list.
+ 
+[] Whoever joins the pomo session will get notified whenever there's a break and will get a reward once the session is done.
 ## ❗️ Information
 ------------
 A command list and general documentation for Citronetto may be found using the `\help` command, and documentation for a specific command, e.g. `config`, may be found with `\help config`.
