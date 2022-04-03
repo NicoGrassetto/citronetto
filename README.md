@@ -27,6 +27,8 @@ With many features to come.
 - [ ] Pomodoro timer: The bot will show the timer in the title of the study room and play a sound at the start and end of each session.
 ### 🗒 Todo list system
 - [ ] Privacy mode for the todo list.
+- [ ] Private / public reminder for a task.
+- [ ] Rather than an embed message for the todo list, make one using canvas and display the final image through an embed
 ### 🎙 Server channels
 - [ ] Camera-only channels.
 - [ ] Channel to find a study buddy (in case you are not automatically matched) using a recommender system.
@@ -46,6 +48,10 @@ With many features to come.
 - [ ] Provide a dashboard for mods.
 - [ ] Full-Scale Moderation System: Punish cheaters, audit-log, welcome message, and so much more using our full-scale moderation system.
 - [ ] Goal Management System: /set <my goal> <option: daily, weekly, monthly>: Sends a message in the corresponding channel making sure you've completed your goal.
+- [ ] Report/Ticket System: Members can send issues or reports over someone to a specific channel. Based on each member's issues posted and whether or not the accused has received a significant number of reports. A human may give the sentence.
+- [ ] Guidelines: In order to avoid an extensive number of channels related to the server and his inner working / guidelines and rules, provide a single channel wherein you can move through the different topics and sets of rules / tutos via a reactions system.
+- [ ] Resource SYstem like on the science and tech where you scroll from page to page using reactuons and then press the book button to get sent the resouce
+- [ ] Subscription system
 ### 🪄 Social 
 - [ ] Choose your field of study: Add a role related to your field of study and/ or your professional status.
 - [ ] Schedule a study session with your friends and or your study gang and get rewarded.
@@ -55,49 +61,32 @@ With many features to come.
 - [ ] Create statistics of who likes who based on server's messages and activity.
 - [ ] Work Partner Feature: Finds you a work partner for the day. You check on each other. Lasts for 8 hours.
 - [ ] Study Tiers and Achievements: Reward users based on their total study time, allow them to get better ranks, and show off how long they've been working.
+- [ ] /gangs: Display a ranking of study gangs on the server.
 ### 🎰 Games
 - [ ] Language game invented by @ian#7518
 - [ ] Implement drinking games or link them through a channel.
 ### 🎲 Miscellaneous features
 - [ ] /timezone
 - [ ] Send a message to members who have set their location to remind them to go take a walk outside when it's sunny.
-
+- [ ] Music bot
+- [ ] Greetings Reaction System: Make the bot react to greeting messages. Detect them through a dictionary, regex, or NLP.
 ### 💰 Economy 
 - [ ] Each person earns (money?) by getting reactions to his message(s). Each reaction has a different weight depending on the emote.
 - [ ] Full-Scale Economy System: Reward users for studying, allow them to use the coins to buy private study rooms, schedule accountability rooms, and even change their name's color.
  - [ ] /invest @<user>: Invest in a user's endeavours. eg that person's sellings are doing quite good and that person has release some shares you can invest in. You get a percentage of each sell. That person on the other ends gets your freshly invested money in his balance.
  - [ ] /loan <amount>: Make a loan. The allowance is determined by an algorithm that favours "good members". 
  - [ ] /assets: display user's assets
- 
- -------------
-People create study gangs via the shop and compete against each others. 
-- .gangs: Display a ranking of study gangs on the server.
-  **Report/Ticket System:** 
-Members can send issues or reports over someone to a specific channel. Based on each member's issues posted and whether or not the accused has received a significant number of reports. A human may give the sentence.
-  **Guidelines**: In order to avoid an extensive number of channels related to the server and his inner working / guidelines and rules, provide a single channel wherein you can move through the different topics and sets of rules / tutos via a reactions system.
-  music bot
-  Private / public reminder for a task.
-  Rather than an embed message for the todo list, make one using canvas and display the final image through an embed
-
-Resource SYstem like on the science and tech where you scroll from page to page using reactuons and then press the book button to get sent the resouce
-  **Command:** transfer <message ID> to <channel> <warn true-false> <fine: Number>
-- Description: Fetch a message sent in the wrong channel or topic and post it in the right channel. Afterwards warn the user
-  Automatic Slow Mode
-  👋  **Greetings Reaction System**
-- Make it more robust through more greetings
-- Regex
-- NLP
-  Subscription system
-  **🛒Shop**
-- Buy role colours.
-- Buy special roles and special accesses to secret rooms.
-- Buy ad alerts.
-- Change your name.
+ ### 🛒 Shop
+- [ ]by role colours.
+- [ ] uy special roles and special accesses to secret rooms.
+- [ ] uy ad alerts.
+- [ ]Change your name.
 - Change someone else's name.
 - Member can sell items for a chosen amount. Whenever someone buys it the member who created the item will get a reward with a percentage of the price.
 - Member can create events and will get rewarded in the same fashion as above.
 - Marketplace system
 - Members can create events and get rewarded for doing so based on the number of activity it generates.
+ -------------
   Answer to greeting messages with an emoji
   Find a match on the server based on a mining of ID cards and messages + roles.
   Salary feature: For a given task a user / role gets money for as long as he is doing whatever he's supposed to do.
