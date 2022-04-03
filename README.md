@@ -84,7 +84,7 @@ With many features to come.
 - [ ] Buy role colours.
 - [ ] Buy special roles and special accesses to secret rooms.
 - [ ] Buy ad alerts.
-- [ ]Change your name.
+- [ ] Change your name.
 - [ ] Change someone else's name.
 - [ ] Member can sell items for a chosen amount. Whenever someone buys it the member who created the item will get a reward with a percentage of the price.
 - [ ] Ad system on the server where in exchange of real money or server points one can make an announcement of his choice (Discord server, twitch, whatever...)
