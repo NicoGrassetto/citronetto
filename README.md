@@ -25,10 +25,12 @@ With many features to come.
 - [ ] Individual pomodoro timers.
 - [ ] Add an audio alert for the pomo timer.
 - [ ] Pomodoro timer: The bot will show the timer in the title of the study room and play a sound at the start and end of each session.
+- [ ] Whoever joins a pomo session will get notified whenever there's a break and will get a reward once the session is done.
 ### 🗒 Todo list system
 - [ ] Privacy mode for the todo list.
 - [ ] Private / public reminder for a task.
 - [ ] Rather than an embed message for the todo list, make one using canvas and display the final image through an embed
+- [ ] Allow the user to modify a message in the todo list.
 ### 🎙 Server channels
 - [ ] Camera-only channels.
 - [ ] Channel to find a study buddy (in case you are not automatically matched) using a recommender system.
@@ -52,6 +54,7 @@ With many features to come.
 - [ ] Guidelines: In order to avoid an extensive number of channels related to the server and his inner working / guidelines and rules, provide a single channel wherein you can move through the different topics and sets of rules / tutos via a reactions system.
 - [ ] Resource SYstem like on the science and tech where you scroll from page to page using reactuons and then press the book button to get sent the resouce
 - [ ] Subscription system
+- [ ] Ban words
 ### 🪄 Social 
 - [ ] Choose your field of study: Add a role related to your field of study and/ or your professional status.
 - [ ] Schedule a study session with your friends and or your study gang and get rewarded.
@@ -65,6 +68,7 @@ With many features to come.
 ### 🎰 Games
 - [ ] Language game invented by @ian#7518
 - [ ] Implement drinking games or link them through a channel.
+- [ ] Lottery
 ### 🎲 Miscellaneous features
 - [ ] /timezone
 - [ ] Send a message to members who have set their location to remind them to go take a walk outside when it's sunny.
@@ -77,37 +81,21 @@ With many features to come.
  - [ ] /loan <amount>: Make a loan. The allowance is determined by an algorithm that favours "good members". 
  - [ ] /assets: display user's assets
  ### 🛒 Shop
-- [ ]by role colours.
-- [ ] uy special roles and special accesses to secret rooms.
-- [ ] uy ad alerts.
+- [ ] Buy role colours.
+- [ ] Buy special roles and special accesses to secret rooms.
+- [ ] Buy ad alerts.
 - [ ]Change your name.
-- Change someone else's name.
-- Member can sell items for a chosen amount. Whenever someone buys it the member who created the item will get a reward with a percentage of the price.
-- Member can create events and will get rewarded in the same fashion as above.
-- Marketplace system
-- Members can create events and get rewarded for doing so based on the number of activity it generates.
- -------------
-  Answer to greeting messages with an emoji
-  Find a match on the server based on a mining of ID cards and messages + roles.
-  Salary feature: For a given task a user / role gets money for as long as he is doing whatever he's supposed to do.
-Lottery system 
- A platform game linked to the server's database where each member logs in with his Discord account and gets to earn rewards.
- Ad system on the server where in exchange of real money or server points one can make an announcement of his choice (Discord server, twitch, whatever...)
- Ban word: .ban <word>
-add the word to the txt file
-+ bad language detection system.
- Online world where each person on the server gets to have his character in the online world. As actions are performed the characters move and do actions in the world. For instance whenever there is someone switching from one room to anot her the character will perform the same action in the world. 
- ⭐️  __Popularity Feature__:
-- Reactions to your message improve you popularity rate.
-- Tags improve your popularity rate.
+- [ ] Change someone else's name.
+- [ ] Member can sell items for a chosen amount. Whenever someone buys it the member who created the item will get a reward with a percentage of the price.
+- [ ] Ad system on the server where in exchange of real money or server points one can make an announcement of his choice (Discord server, twitch, whatever...)
+- [ ] Member can create events and will get rewarded in the same fashion as above.
+- [ ] Marketplace system
+- [ ] Members can create events and get rewarded for doing so based on the number of activity it generates.
+### ⭐️ Popularity Feature
+- [ ] Reactions to your message improve you popularity rate.
+- [ ] Tags improve your popularity rate.
 - [ ] Message rate after you sent a message improve your popularity rate. So basically analyse and detect when someone is the conversation / topic’s trigger.
-- [ ] Update for the online world -> Each person gets to buy stuff for his character like clothes and suchlike (also via Discord). After a while we can also implement a study system through the game itself.
- Template modification: (more or less like on science and tech)
 
-
-- [ ] Allow the user to modify a message in the todo list.
- 
-- [ ] Whoever joins a pomo session will get notified whenever there's a break and will get a reward once the session is done.
 ## ❗️ Information
 ------------
 A command list and general documentation for Citronetto may be found using the `\help` command, and documentation for a specific command, e.g. `config`, may be found with `\help config`.
