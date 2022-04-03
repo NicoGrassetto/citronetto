@@ -112,8 +112,8 @@ add the word to the txt file
 
 [] Allow the user to modify a message in the todo list.
  
-[] Whoever joins the pomo session will get notified whenever there's a break and will get a reward once the session is done.
+[] Whoever joins a pomo session will get notified whenever there's a break and will get a reward once the session is done.
 ## ❗️ Information
 ------------
 A command list and general documentation for Citronetto may be found using the `\help` command, and documentation for a specific command, e.g. `config`, may be found with `\help config`.
-Make sure to check the [full documentation]() to stay updated.--->
+Make sure to check the [full documentation](https://www.notion.so/nicograssetto/Citronetto-bd11b555c2a24bc692525fe0c903c59b) to stay updated.--->
