@@ -105,14 +105,14 @@ add the word to the txt file
  ⭐️  __Popularity Feature__:
 - Reactions to your message improve you popularity rate.
 - Tags improve your popularity rate.
-- Message rate after you sent a message improve your popularity rate. So basically analyse and detect when someone is the conversation / topic’s trigger.
- Update for the online world -> Each person gets to buy stuff for his character like clothes and suchlike (also via Discord). After a while we can also implement a study system through the game itself.
+- [ ] Message rate after you sent a message improve your popularity rate. So basically analyse and detect when someone is the conversation / topic’s trigger.
+- [ ] Update for the online world -> Each person gets to buy stuff for his character like clothes and suchlike (also via Discord). After a while we can also implement a study system through the game itself.
  Template modification: (more or less like on science and tech)
 
 
-[] Allow the user to modify a message in the todo list.
+- [ ] Allow the user to modify a message in the todo list.
  
-[] Whoever joins a pomo session will get notified whenever there's a break and will get a reward once the session is done.
+- [ ] Whoever joins a pomo session will get notified whenever there's a break and will get a reward once the session is done.
 ## ❗️ Information
 ------------
 A command list and general documentation for Citronetto may be found using the `\help` command, and documentation for a specific command, e.g. `config`, may be found with `\help config`.
