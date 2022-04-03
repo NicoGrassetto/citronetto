@@ -29,7 +29,7 @@ With many features to come.
 ### 🗒 Todo list system
 - [ ] Privacy mode for the todo list.
 - [ ] Private / public reminder for a task.
-- [ ] Rather than an embed message for the todo list, make one using canvas and display the final image through an embed
+- [ ] Rather than an embed message for the todo list, make one using a canvas and display the final image through an embed.
 - [ ] Allow the user to modify a message in the todo list.
 ### 🎙 Server channels
 - [ ] Camera-only channels.
@@ -52,7 +52,7 @@ With many features to come.
 - [ ] Goal Management System: /set <my goal> <option: daily, weekly, monthly>: Sends a message in the corresponding channel making sure you've completed your goal.
 - [ ] Report/Ticket System: Members can send issues or reports over someone to a specific channel. Based on each member's issues posted and whether or not the accused has received a significant number of reports. A human may give the sentence.
 - [ ] Guidelines: In order to avoid an extensive number of channels related to the server and his inner working / guidelines and rules, provide a single channel wherein you can move through the different topics and sets of rules / tutos via a reactions system.
-- [ ] Resource SYstem like on the science and tech where you scroll from page to page using reactuons and then press the book button to get sent the resouce
+- [ ] Horizontal scrolling system for embeds.
 - [ ] Subscription system
 - [ ] Ban words
 ### 🪄 Social 
@@ -63,7 +63,6 @@ With many features to come.
 - [ ] ID cards
 - [ ] Create statistics of who likes who based on server's messages and activity.
 - [ ] Work Partner Feature: Finds you a work partner for the day. You check on each other. Lasts for 8 hours.
-- [ ] Study Tiers and Achievements: Reward users based on their total study time, allow them to get better ranks, and show off how long they've been working.
 - [ ] /gangs: Display a ranking of study gangs on the server.
 ### 🎰 Games
 - [ ] Language game invented by @ian#7518
@@ -77,9 +76,9 @@ With many features to come.
 ### 💰 Economy 
 - [ ] Each person earns (money?) by getting reactions to his message(s). Each reaction has a different weight depending on the emote.
 - [ ] Full-Scale Economy System: Reward users for studying, allow them to use the coins to buy private study rooms, schedule accountability rooms, and even change their name's color.
- - [ ] /invest @<user>: Invest in a user's endeavours. eg that person's sellings are doing quite good and that person has release some shares you can invest in. You get a percentage of each sell. That person on the other ends gets your freshly invested money in his balance.
- - [ ] /loan <amount>: Make a loan. The allowance is determined by an algorithm that favours "good members". 
- - [ ] /assets: display user's assets
+ - [ ] `/invest @<user>`
+ - [ ] `/loan <amount>`: Make a loan. The allowance is determined by an algorithm that favours "good members". 
+ - [ ] `/assets`: display user's assets
  ### 🛒 Shop
 - [ ] Buy role colours.
 - [ ] Buy special roles and special accesses to secret rooms.
@@ -95,7 +94,8 @@ With many features to come.
 - [ ] Reactions to your message improve you popularity rate.
 - [ ] Tags improve your popularity rate.
 - [ ] Litterature review on popularity metrics for online communities.
-
+------
+__Disclaimer__: The aformentioned ideas are yet to be implemented. To submit your idea for the bot feel free to tag one of the mods on the server!
 ## ❗️ Information
 ------------
 A command list and general documentation for Citronetto may be found using the `\help` command, and documentation for a specific command, e.g. `config`, may be found with `\help config`.
