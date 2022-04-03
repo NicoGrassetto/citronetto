@@ -94,7 +94,7 @@ With many features to come.
 ### ⭐️ Popularity Feature
 - [ ] Reactions to your message improve you popularity rate.
 - [ ] Tags improve your popularity rate.
-- [ ] Message rate after you sent a message improve your popularity rate. So basically analyse and detect when someone is the conversation / topic’s trigger.
+- [ ] Litterature review on popularity metrics for online communities.
 
 ## ❗️ Information
 ------------
