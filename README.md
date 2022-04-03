@@ -21,49 +21,55 @@ With many features to come.
 
 ## 🎯 Roadmap
 ------------
-- [ ] Camera-only channels.
+### 🍅 Pomodoro system 
 - [ ] Individual pomodoro timers.
+- [ ] Add an audio alert for the pomo timer.
+- [ ] Pomodoro timer: The bot will show the timer in the title of the study room and play a sound at the start and end of each session.
+### 🗒 Todo list system
+- [ ] Privacy mode for the todo list.
+### 🎙 Server channels
+- [ ] Camera-only channels.
+- [ ] Channel to find a study buddy (in case you are not automatically matched) using a recommender system.
+- [ ] Drink Water Alert reminding you to drink water every 60 minutes.
+- [ ] Study rooms with custom musics (lofi, hogwards, ...)
+- [ ] Bug & Feature command/channel to report a bug or possible improvements.
+- [ ] Topic analysis system that changes the channel's name according to the topic.
+- [ ] Personal study rooms (for subscribers?).
+- [ ] Accountability Rooms: This feature allows the users to use their coins to schedule a time to study at. Not attending prevents everyone in the room from getting the bonus.
+- [ ] Private Study Room: Allows the members to create their own private study rooms and invite their friends to join!
+### 🛠 Server Settings
 - [ ] Deep focus mode (No notifications)
 - [ ] Link the server to Disboard and implement a bump reminder.
 - [ ] Moderation logs
+- [ ] Love rate on the server based on emojis and messages.
+- [ ] Announcements linked to LemonSalt's channel.
+- [ ] Provide a dashboard for mods.
+- [ ] Full-Scale Moderation System: Punish cheaters, audit-log, welcome message, and so much more using our full-scale moderation system.
+- [ ] Goal Management System: /set <my goal> <option: daily, weekly, monthly>: Sends a message in the corresponding channel making sure you've completed your goal.
+### 🪄 Social 
 - [ ] Choose your field of study: Add a role related to your field of study and/ or your professional status.
 - [ ] Schedule a study session with your friends and or your study gang and get rewarded.
-- [ ] Channel to find a study buddy (in case you are not automatically matched) using a recommender system.
-- [ ] Drink Water Alert reminding you to drink water every 60 minutes.
 - [ ] Birthday messages
-- [ ] Language game invented by @ian#7518
-- [ ] Love rate on the server based on emojis and messages.
 - [ ] Language roles
-- [ ] /timezone Milano
 - [ ] ID cards
-- [ ] Bug & Feature command / channel to report a bug or possible improvements.
-- [ ] Study rooms with custom musics (lofi, hogwards, ...)
-- [ ] DM members reminding them to go outside when the weather is good.
-- [ ] Announcements linked to LemonSalt's channel.
 - [ ] Create statistics of who likes who based on server's messages and activity.
-- [ ] Implement drinking games or link them through a channel.
-- [ ] Topic analysis system that changes the channel's name according to the topic.
-- [ ] Provide a dashboard for mods.
-- [ ] Add an audio alert for the pomo timer.
-- [ ] Personal study rooms (for subscribers?).
-- [ ] Privacy mode for the todo list.
-- [ ] Each person earns (money?) by getting reactions to his message(s). Each reaction has a different weight depending on the emote.
 - [ ] Work Partner Feature: Finds you a work partner for the day. You check on each other. Lasts for 8 hours.
-- [ ] Accountability Rooms: This feature allows the users to use their coins to schedule a time to study at. Not attending prevents everyone in the room from getting the bonus.
-- [ ] Study and Work Statistics: Users can view their daily, weekly, monthly and all-time stats, as well as their study streak.
-- [ ] Pomodoro timer: The bot will show the timer in the title of the study room and play a sound at the start and end of each session.
-- [ ] Private Study Room: Allows the members to create their own private study rooms and invite their friends to join!
 - [ ] Study Tiers and Achievements: Reward users based on their total study time, allow them to get better ranks, and show off how long they've been working.
-- [ ] Full-Scale Economy System: Reward users for studying, allow them to use the coins to buy private study rooms, schedule accountability rooms, and even change their name's color.
-- [ ] Full-Scale Moderation System: Punish cheaters, audit-log, welcome message, and so much more using our full-scale moderation system.
-- [ ] **🔥 Goal Management System**
-- /set <my goal> <option: daily, weekly, monthly>: Sends a message in the corresponding channel making sure you've completed your goal.
-  **🏦 Bank**
+### 🎰 Games
+- [ ] Language game invented by @ian#7518
+- [ ] Implement drinking games or link them through a channel.
+### 🎲 Miscellaneous features
+- [ ] /timezone
+- [ ] Send a message to members who have set their location to remind them to go take a walk outside when it's sunny.
 
-- .invest @<user>: Invest in a user's endeavours. eg that person's sellings are doing quite good and that person has release some shares you can invest in. You get a percentage of each sell. That person on the other ends gets your freshly invested money in his balance.
-- .loan <amount>: Make a loan. The allowance is determined by an algorithm that favours "good members". 
-- .assets: display user's assets
-  **👊 Study Gang** 
+### 💰 Economy 
+- [ ] Each person earns (money?) by getting reactions to his message(s). Each reaction has a different weight depending on the emote.
+- [ ] Full-Scale Economy System: Reward users for studying, allow them to use the coins to buy private study rooms, schedule accountability rooms, and even change their name's color.
+ - [ ] /invest @<user>: Invest in a user's endeavours. eg that person's sellings are doing quite good and that person has release some shares you can invest in. You get a percentage of each sell. That person on the other ends gets your freshly invested money in his balance.
+ - [ ] /loan <amount>: Make a loan. The allowance is determined by an algorithm that favours "good members". 
+ - [ ] /assets: display user's assets
+ 
+ -------------
 People create study gangs via the shop and compete against each others. 
 - .gangs: Display a ranking of study gangs on the server.
   **Report/Ticket System:** 
