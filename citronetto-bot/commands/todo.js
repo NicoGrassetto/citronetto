@@ -1,20 +1,16 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
-
+const utils = require('../utils.js')
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('todo')
-        .setDescription('Some description')
-        .addStringOption(option => option.setName('todo').setDescription('Some description')),
+        .setDescription('Create a todo list!')
+        .addStringOption(option => option.setName('tasks').setDescription('Pass in some tasks')),
 	async execute(interaction) {
-        if (interaction.channel.id === '828177714993299466') {
-            const confessionEmbed = new MessageEmbed()
-            .setColor('#f0b6f2')
-            .setTitle("🌹Confession System🔒")
-            .addField("🌸A new confession just arrived!🤫", interaction.options.getString('confession'));
-            await interaction.channel.send({ embeds: [confessionEmbed] });
-            await interaction.reply({ content:'Confession successfully sent! 👍', ephemeral:true });
-	
+        if (interaction.channel.id === '814074843653079050') {
+            console.log("Message sent in todo.");
+            await interaction.channel.send({ content: "Soon a really cute embed message" });
+
         }
     },
 };
