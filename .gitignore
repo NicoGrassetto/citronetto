@@ -1,0 +1,6 @@
+config.json
+README.md
+config.env
+database.sqlite
+test.js
+node_modules
