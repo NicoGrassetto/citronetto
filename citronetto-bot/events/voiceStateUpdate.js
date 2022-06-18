@@ -1,10 +1,7 @@
-const Keyv = require('keyv');
-const keyv = new Keyv(); // for in-memory storage
-keyv.on('error', err => console.error('Keyv connection error:', err));
 const emojis = '🐶 🐱 🐭 🐹 🐰 🦊 🐻 🐼 🐻‍ 🐨 🐯 🦁 🐮 🐷 🐽 🐸 🐵 🙈 🙉 🙊 🐒 🐔 🐧 🐦 🐤 🐣 🐥 🦆 🦅 🦉 🦇 🐺 🐗 🐴 🦄 🐝 🪱 🐛 🦋 🐌 🐞 🐜 🪰 🪲 🪳 🦟 🦗 🕷 🕸 🦂 🐢 🐍 🦎 🦖 🦕 🐙 🦑 🦐 🦞 🦀 🐡 🐠 🐟 🐬 🐳 🐋 🦈 🐊 🐅 🐆 🦓 🦍 🦧 🦣 🐘 🦛 🦏 🐪 🐫 🦒 🦘 🦬 🐃 🐂 🐄 🐎 🐖 🐏 🐑 🦙 🐐 🦌 🐕 🐩 🦮 🐕‍🦺 🐈 🪶 🐓 🦃 🦤 🦚 🦜 🦢 🦩 🕊 🐇 🦝 🦨 🦡 🦫 🦦 🦥 🐁 🐀 🐿 🦔 🐉 🐲 🌵 🎄 🌲 🌳 🌴 🪵 🌱 🌿 ☘️ 🍀 🎍 🪴 🎋 🍃 🍂 🍁 🍄 🐚 🪨 🌾 💐 🌷 🌹 🥀 🌺 🌸 🌼 🌻 🌞 🌝 🌛 🌚 🌙 🌎 🪐 💫 ⭐️ 🌟 ✨ ⚡️ ☄️ 💥 🔥 🌪 🌈 🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🫐 🍈 🍒 🍑 🥭 🍍 🥥 🥝 🍅 🍆 🥑 🥦 🥬 🥒 🌶 🫑 🌽 🥕 🫒 🧄 🧅 🥔 🍠 🥐 🥯 🍞 🥖 🥨 🧀 🥚 🍳 🧈 🥞 🧇 🥓 🥩 🍗 🍖 🦴 🌭 🍔 🍟 🍕 🫓 🥪 🥙 🧆 🌮 🌯 🫔 🥗 🥘 🫕 🥫 🍝 🍜 🍲 🍛 🍣 🍱 🥟 🦪 🍤 🍙 🍚 🍘 🍥 🥠 🥮 🍢 🍡 🍧 🍨 🍦 🥧 🧁 🍰 🎂 🍮 🍭 🍬 🍫 🍿 🍩 🍪 🌰 🥜 🍯 🥛 🍼 🫖 ☕️ 🍵 🧃 🥤 🧋 🍶 🧂 💸 💵 💴 💶 💷 💰 💳 💎 🔮 🧿 🔭 🔬 🧬 🦠 🧫 🧪 🌡 🧸 🪆 🎁 🎀 🎊 🎉 🎎 🏮 📓 📔 📒 📕 📗 📘 📙 📚 📖 🔖 🧷 🔗 📎 🖇 📐 📏 🧮';
 const emojisArray = emojis.split(' ');
-console.log(emojisArray);
-
+const { MessageEmbed } = require('discord.js');
+const https = require('https');
 
 
 
@@ -38,8 +35,30 @@ module.exports = {
                     const id = category.id;
                     newState.guild.channels.create(textChannelName, {type: 'GUILD_TEXT', parent:id})
                     .then((newlyCreatedChannel) => {
+                        // Random quote sent alongside the embed.
+                        let quote = "";
+                        https.get('https://inspiration.goprogram.ai', res => {
+                            res.setEncoding('utf8');  
+                            res.on('data', body => {
+                                quote = JSON.parse(body).quote;
+                            });
+                        });
+                        console.log(quote);
+                        const channelEmbed = new MessageEmbed()
+                        .setColor("BC71FF")
+                        .setTitle("Welcome!")
+                        .addField("Productivity Tools", "Pomodoro timer\nhttps://pomofocus.io/\nTodo list\nhttps://todoist.com/\nForest\n https://www.forestapp.cc/\n Notion\nhttps://www.notion.so/personal")
+                        .addField("Information", "This room is meant to be for studying. We kindly invite you to join the lounge if you wish to take part to any other type of social interaction. The room will be deleted once the last person has left. Thus, also feel free to be yourself! Any server's rule applies in this channel too. Be mindful of others and do not spam too much the channel for it is after all, a study channel, isn't it? 😉")
+                        .addField("Commands", "✅ `/todo`\nCreate and manage your custom todo list with our advanced and one-of-a-kind system.\n🍅 `/pomo`\nStart a pomodoro session either privatly or within the channel.\n👏 `/cheer`\n Cheer up the channel and its members. We all need a bit of motivation. Let's do this!")
+                        //.addField("Random motivational quote:", quote)
+                        .setAuthor("Citronetto")
+                        .setDescription("Congrats! You just created a study room! Don't be shy we are a friendly community. Turn on your camera to get hourly rewards 😎 or use our homemade productivity tools 🛠.")
+                        .setThumbnail('https://i.imgur.com/pT6SM87.png')
+                        .setFooter("LemonSaltStudio©","https://i.imgur.com/cLjbtlk.gif")
+                        .setTimestamp();
+                        newlyCreatedChannel.send({embeds: [channelEmbed]});
                         //TODO should be set to a drink-water-embed message.
-                        sendReminder(newlyCreatedChannel);
+                        //sendReminder(newlyCreatedChannel);
                         //TODO Does not switch you to the new channel when you jump into create study room from another study room.
                     });
                     newState.guild.channels.create(voiceChannelName, {type: 'GUILD_VOICE', parent:id, userLimit:20, topic:"Study Channel"})
