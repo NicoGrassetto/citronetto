@@ -14,5 +14,8 @@
     "lda": "^0.2.0",
     "mongoose": "^6.2.1",
     "neural-network-svg": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0"
   }
 }
