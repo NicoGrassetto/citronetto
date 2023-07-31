@@ -5,6 +5,6 @@ module.exports = {
 		.setName('display')
 		.setDescription('Display your todo list.'),
 	async execute(interaction) {
-		await interaction.reply('displayed');
+		await interaction.reply('Todo list displayed!');
 	},
 };
