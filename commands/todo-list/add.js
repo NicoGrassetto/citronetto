@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { TODOList } = require('../templates/listTemplate.js');
+const { TODOList } = require('../../templates/listTemplate.js');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('add')
