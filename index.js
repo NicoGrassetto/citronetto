@@ -1,5 +1,6 @@
 // Require the necessary discord.js classes
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
+const Sequelize = require('sequelize');
 const { token } = require('./config.json');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -7,6 +8,15 @@ const path = require('node:path');
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+// Define the TODO list DB:
+const sequelize = new Sequelize('database', 'user', 'password', {
+	host: 'localhost',
+	dialect: 'sqlite',
+	logging: false,
+	storage: 'database.sqlite',
+});
+
+// Load commands and events:
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);

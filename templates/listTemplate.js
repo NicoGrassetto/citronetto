@@ -115,4 +115,4 @@ class TODOList {
 	}
 }
 
-module.exports = TODOList;
+module.exports = { TODOList };
