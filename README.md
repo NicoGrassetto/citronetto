@@ -90,13 +90,13 @@ With many features to come.
 - [ ] Member can create events and will get rewarded in the same fashion as above.
 - [ ] Marketplace system
 - [ ] Members can create events and get rewarded for doing so based on the number of activity it generates.
-### ⭐️ Popularity Feature
-- [ ] Reactions to your message improve you popularity rate.
-- [ ] Tags improve your popularity rate.
-- [ ] Litterature review on popularity metrics for online communities.
-------
-__Disclaimer__: The aformentioned ideas are yet to be implemented. To submit your idea for the bot feel free to tag one of the mods on the server!
-## ❗️ Information
-------------
-A command list and general documentation for Citronetto may be found using the `\help` command, and documentation for a specific command, e.g. `config`, may be found with `\help config`.
+[]: # (### ⭐️ Popularity Feature)
+[]: # (- [ ] Reactions to your message improve you popularity rate.)
+[]: # (- [ ] Tags improve your popularity rate.)
+[]: # (- [ ] Litterature review on popularity metrics for online communities.)
+[]: # (------)
+[]: # (__Disclaimer__: The aformentioned ideas are yet to be implemented. To submit your idea for the bot feel free to tag one of the mods on the server!)
+[]: # (## ❗️ Information)
+[]: # (------------)
+A command list and general documentation for Citronetto may be found using the `\help` command.
 Make sure to check the [full documentation](https://www.notion.so/nicograssetto/Citronetto-bd11b555c2a24bc692525fe0c903c59b) to stay updated.--->
