@@ -86,10 +86,10 @@ With many features to come.
 - [ ] Change your name.
 - [ ] Change someone else's name.
 - [ ] Member can sell items for a chosen amount. Whenever someone buys it the member who created the item will get a reward with a percentage of the price.
-- [ ] Ad system on the server where in exchange of real money or server points one can make an announcement of his choice (Discord server, twitch, whatever...)
-- [ ] Member can create events and will get rewarded in the same fashion as above.
-- [ ] Marketplace system
-- [ ] Members can create events and get rewarded for doing so based on the number of activity it generates.
+[]: # (- [ ] Ad system on the server where in exchange of real money or server points one can make an announcement of his choice (Discord server, twitch, whatever...))
+[]: # (- [ ] Member can create events and will get rewarded in the same fashion as above.)
+[]: # (- [ ] Marketplace system)
+[]: # (- [ ] Members can create events and get rewarded for doing so based on the number of activity it generates.)
 []: # (### ⭐️ Popularity Feature)
 []: # (- [ ] Reactions to your message improve you popularity rate.)
 []: # (- [ ] Tags improve your popularity rate.)
