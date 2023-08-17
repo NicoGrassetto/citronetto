@@ -27,7 +27,7 @@ class TODOList {
 		}
 
 		this._tasks = tasks;
-		this._tasks.map((task) => ({ taskDescription: task, taskStatus: TaskStatuses.TODO }));
+		this._tasks = this._tasks.map((task) => ({ taskDescription: task, taskStatus: TaskStatuses.TODO }));
 	}
 
 	/**
@@ -44,6 +44,30 @@ class TODOList {
 			this._tasks.push({ taskDescription: newTasks, taskStatus: TaskStatuses.TODO });
 		}
 	}
+
+	getDescriptions() {
+		const descriptions = this._tasks.map(task => { return task.taskDescription; });
+		return descriptions;
+	}
+
+	getStatuses() {
+		const statuses = this._tasks.map(task => { return task.taskStatus; });
+		return statuses;
+	}
+
+	getTaskStatusesAsBoolean() {
+		let formatedTasks = this.getStatuses();
+		formatedTasks = formatedTasks.map(status => {
+			if (status === TaskStatuses.TODO) {
+				return false;
+			}
+			else {
+				return true;
+			}
+		});
+		return formatedTasks;
+	}
+
 
 	/**
 	 * Deletes tasks at specified indices from the TODO list.

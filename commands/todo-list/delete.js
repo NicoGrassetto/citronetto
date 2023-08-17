@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { TODOList } = require('../../templates/listTemplate.js');
+const { Database } = require('../../database.js');
+const database = new Database();
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -8,5 +9,10 @@ module.exports = {
 		.setDescription('Delete a task from your todo list.'),
 	async execute(interaction) {
 		await interaction.reply('Task deleted');
+		const tag = interaction.user.id;
+		const number = interaction.options.getInteger('task-number');
+		// console.log(tag);
+		// console.log(number);
+		database.deleteTaskFromTODOList('972158965913882675', 1);
 	},
 };
