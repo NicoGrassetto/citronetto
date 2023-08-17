@@ -4,17 +4,13 @@ const Sequelize = require('sequelize');
 const { token } = require('./config.json');
 const fs = require('node:fs');
 const path = require('node:path');
-
+const { Database } = require('./database.js');
+const db = new Database();
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 // Define the TODO list DB:
-const sequelize = new Sequelize('database', 'user', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	storage: 'database.sqlite',
-});
+db.sync();
 
 // Load commands and events:
 client.commands = new Collection();

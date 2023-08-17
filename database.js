@@ -23,6 +23,16 @@ class Database {
 	sync() {
 		this.Lists.sync();
 	}
+
+	async addTODOList(tag, todoList) {
+		// const tagName = interaction.options.getString('name');
+		// const tagDescription = interaction.options.getString('description');
+		// equivalent to: INSERT INTO tags (name, description, username) values (?, ?, ?);
+		await this.Lists.create({
+			tag: tag,
+			list: todoList,
+		});
+	}
 }
 
 module.exports = { Database } ;
