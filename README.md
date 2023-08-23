@@ -86,17 +86,17 @@ With many features to come.
 - [ ] Change your name.
 - [ ] Change someone else's name.
 - [ ] Member can sell items for a chosen amount. Whenever someone buys it the member who created the item will get a reward with a percentage of the price.
-- [ ] Ad system on the server where in exchange of real money or server points one can make an announcement of his choice (Discord server, twitch, whatever...)
-- [ ] Member can create events and will get rewarded in the same fashion as above.
-- [ ] Marketplace system
-- [ ] Members can create events and get rewarded for doing so based on the number of activity it generates.
-### ⭐️ Popularity Feature
-- [ ] Reactions to your message improve you popularity rate.
-- [ ] Tags improve your popularity rate.
-- [ ] Litterature review on popularity metrics for online communities.
-------
-__Disclaimer__: The aformentioned ideas are yet to be implemented. To submit your idea for the bot feel free to tag one of the mods on the server!
-## ❗️ Information
-------------
-A command list and general documentation for Citronetto may be found using the `\help` command, and documentation for a specific command, e.g. `config`, may be found with `\help config`.
+[]: # (- [ ] Ad system on the server where in exchange of real money or server points one can make an announcement of his choice (Discord server, twitch, whatever...))
+[]: # (- [ ] Member can create events and will get rewarded in the same fashion as above.)
+[]: # (- [ ] Marketplace system)
+[]: # (- [ ] Members can create events and get rewarded for doing so based on the number of activity it generates.)
+[]: # (### ⭐️ Popularity Feature)
+[]: # (- [ ] Reactions to your message improve you popularity rate.)
+[]: # (- [ ] Tags improve your popularity rate.)
+[]: # (- [ ] Litterature review on popularity metrics for online communities.)
+[]: # (------)
+[]: # (__Disclaimer__: The aformentioned ideas are yet to be implemented. To submit your idea for the bot feel free to tag one of the mods on the server!)
+[]: # (## ❗️ Information)
+[]: # (------------)
+A command list and general documentation for Citronetto may be found using the `\help` command.
 Make sure to check the [full documentation](https://www.notion.so/nicograssetto/Citronetto-bd11b555c2a24bc692525fe0c903c59b) to stay updated.--->
