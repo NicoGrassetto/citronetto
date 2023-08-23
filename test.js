@@ -1,15 +1,16 @@
-const { Database } = require('./database.js');
-const { tasksToString } = require('./utils.js');
 const { TODOList } = require('./templates/listTemplate.js');
 
-// const tag = '12312312312312';
-// const list = new TODOList(['12312313123adasdasdas', 'asdsadasdddd']);
-// console.log(list.getTaskStatusesAsBoolean());
-// list.setTasksToDone(0);
-// console.log(list.getTaskStatusesAsBoolean());
+const todoList = new TODOList(['Programming', 'Workout']);
 
-// console.log(tasksToString(list.getDescriptions(), list.getTaskStatusesAsBoolean()));
+console.log(todoList.tasksDescriptions);
+console.log(todoList.taskStatuses);
 
-const db = new Database();
-// db.resetTODOList('972158965913882675');
+todoList.addTask('Singing');
 
+console.log(todoList.tasksDescriptions);
+console.log(todoList.taskStatuses);
+
+todoList.deleteTask(4);
+
+console.log(todoList.tasksDescriptions);
+console.log(todoList.taskStatuses);

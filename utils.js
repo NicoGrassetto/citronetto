@@ -1,5 +1,7 @@
-const Discord = require('discord.js');
-exports.tasksToString = function(tasksArr, tasksDoneArr) {
+const { EmbedBuilder } = require('discord.js');
+
+function tasksToString(tasksArr, tasksDoneArr) {
+	// console.log(tasksArr);
 	let output = '';
 	for (let i = 0; i < tasksArr.length; i++) {
 		const task = tasksArr[i].trim();
@@ -7,61 +9,26 @@ exports.tasksToString = function(tasksArr, tasksDoneArr) {
 		output += `${i + 1}. ${isDone} ${task}\n`;
 	}
 	return output;
-};
-
-function tasksToString(tasksArr, tasksDoneArr) {
-	let tasksString = ' ';
-	let n = 1;
-	tasksArr.forEach((task) => {
-		if (tasksDoneArr[tasksArr.indexOf(task)] === true) {
-			if (n < 10) {
-				tasksString += numberToEmote(n + '') + '⠀✅ ' + task.trim() + '\n';
-			}
-			else {
-				// n >= 10
-				tasksString += numberToEmote(n + '') + '⠀✅ ' + task.trim() + '\n';
-			}
-			console.log(tasksString.trim(task));
-		}
-		else if (n < 10) {
-			tasksString += numberToEmote(n + '') + '⠀⭕️ ' + task + '\n';
-		}
-		else {
-			tasksString += numberToEmote(n + '') + ' ⭕️ ' + task + '\n';
-		}
-		n++;
-	});
-	return tasksString;
 }
-exports.createEmbed = function(triple, message) {
-	const embed = new Discord.MessageEmbed()
+
+/**
+ * Create a TODO list embed.
+ * @param  {BaseInteraction} interaction A Discord interaction.
+ * @param  {TODOList} list A TODOList object representing the TODO list.
+ * @return {EmbedBuilder} An EmbedBuilder object representing an Embed object.
+ */
+exports.createTODOListEmbed = function(interaction, list) {
+
+	const TODOListEmbed = new EmbedBuilder()
 		.setColor('#b6a8ed')
 		.setTitle('Todo List 🗒')
 		.setTimestamp()
-		.addField(
-			'📆 ' + message.author.username + '\'s tasks📌',
-			tasksToString(triple.tasks, triple.tasksDone),
-		)
-		.setThumbnail(message.author.avatarURL())
-		.setFooter('LemonSaltStudio©', 'https://i.imgur.com/cLjbtlk.gif');
-	return embed;
+		.addFields({ name: `📆 ${interaction.user.username}'s tasks📌`, value: tasksToString(list.descriptions, list.statuses) })
+		.setAuthor({ name: 'Citronetto', iconURL: 'https://i.imgur.com/AfFp7pu.png' })
+		.setThumbnail(interaction.user.avatarURL())
+		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/cLjbtlk.gif' });
+	return TODOListEmbed;
 };
-
-function numberToEmote(number) {
-	const digitEmotes = ['𝟶', '𝟷', '𝟸', '𝟹', '𝟺', '𝟻', '𝟼', '𝟽', '𝟾', '𝟿'];
-	// const digitEmotes = ['0️⃣', '1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣'];
-	// We assume number is a string.
-	const digits = Array.from(number);
-	let emotes = '';
-	digits.forEach((digit) => {
-		for (let index = 0; index < digitEmotes.length; index++) {
-			if (index === Number(digit)) {
-				emotes += digitEmotes[index];
-			}
-		}
-	});
-	return emotes;
-}
 
 exports.indexOutOfBound = function(arr, n) {
 	if (n <= 0 || n > arr.length) {
@@ -116,31 +83,46 @@ exports.isValidTransfer = function(balance, amount) {
 	return false;
 };
 
-exports.createSuccessEmbed = function(message, customMessage) {
-	const embed = new Discord.MessageEmbed()
+exports.createSuccessEmbed = function(interaction, customMessage) {
+	const embed = new EmbedBuilder()
 		.setColor('#9eff74')
 		.setTitle('Action successfull ✔️')
 		.setTimestamp()
-		.addField(message.author.username, customMessage)
+		.addFields({ name: interaction.user.username, value: customMessage })
 		.setThumbnail('https://i.imgur.com/kXQuYBm.gif')
-		.setFooter('LemonSaltStudio©', 'https://i.imgur.com/cLjbtlk.gif');
+		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/cLjbtlk.gif' });
 	return embed;
 };
 
-exports.createFailureEmbed = function(message, customMessage) {
-	const embed = new Discord.MessageEmbed()
+exports.TODOListCreatedSuccessEmbed = new EmbedBuilder()
+	.setColor('#9eff74')
+	.setTitle('Action successfull ✔️')
+	.setAuthor({ name: 'Citronetto', iconURL: 'https://i.imgur.com/AfFp7pu.png' })
+	.setDescription('You just created a TODO list! Congratulations! 🥳\n Bellow you will find a list of handy commands for your productivity journey.')
+	.setThumbnail('https://i.imgur.com/YDnia5V.gif')
+	.addFields(
+		{ name: '`/add`', value: 'Add a new task to your todo list.' },
+		{ name: '`/display`', value: 'Display your todo list.' },
+		{ name: '`/undo`', value: 'Set a task to `todo`.' },
+		{ name: '`/modify`', value: 'Modify a task in your todo list.' },
+		{ name: '`/done`', value: 'Set a task as `done`.' },
+	)
+	.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/cLjbtlk.gif' });
+
+exports.createFailureEmbed = function(interaction, customMessage) {
+	const embed = new EmbedBuilder()
 		.setColor('#f74d4b')
 		.setTitle('Action unsuccessful ❌')
 		.setTimestamp()
-		.addField(message.author.username, customMessage)
+		.addFields({ name: interaction.user.username, value: customMessage })
 		.setThumbnail('https://i.imgur.com/VmAkw8Q.gif')
-		.setFooter('LemonSaltStudio©', 'https://i.imgur.com/cLjbtlk.gif');
+		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/cLjbtlk.gif' });
 	return embed;
 };
 
 exports.createChannelMessageEmbed = function(message, customMessage) {
 	console.log(message + customMessage);
-	const embed = new Discord.MessageEmbed()
+	const embed = new EmbedBuilder()
 		.setColor('#f74d4b')
 		.setTitle('A title')
 		.setTimestamp()

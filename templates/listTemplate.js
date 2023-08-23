@@ -1,140 +1,53 @@
-/**
- * Represents the status of a task.
- *
- * @enum {symbol}
- */
-const TaskStatuses = {
-	TODO: Symbol('TODO'),
-	DONE: Symbol('DONE'),
-};
-
-/**
- * Represents a TODOList containing tasks.
- *
- * @class
- */
 class TODOList {
-	/**
-	 * Creates a new TODOList instance.
-	 *
-	 * @constructor
-	 * @param {Array} tasks - An array of tasks for the TODO list.
-	 * @throws {Error} Throws an error if tasks is not an array or is empty.
-	 */
 	constructor(tasks) {
 		if (!Array.isArray(tasks) || tasks.length === 0) {
 			throw new Error('TODO list must contain at least one task.');
 		}
 
-		this._tasks = tasks;
-		this._tasks = this._tasks.map((task) => ({ taskDescription: task, taskStatus: TaskStatuses.TODO }));
+		this.descriptions = tasks;
+		this.statuses = this.descriptions.map(() => false);
 	}
 
-	/**
-	 * Adds new tasks to the TODO list.
-	 *
-	 * @param {Array|string} newTasks - New tasks to be added. Can be a single task or an array of tasks.
-	 */
-	addTasks(newTasks) {
-		if (Array.isArray(newTasks)) {
-			newTasks.map((task) => ({ taskDescription: task, taskStatus: TaskStatuses.TODO }));
-			this._tasks = this._tasks.concat(newTasks);
+	addTask(taskDescription) {
+		if (typeof taskDescription !== 'string') {
+			throw new Error('taskDescription must be a string.');
+		}
+		console.log('asdasd');
+		this.descriptions.push(taskDescription);
+		this.statuses.push(false);
+	}
+
+	deleteTask(index) {
+		if (index >= 0 && index < this.descriptions.length) {
+			this.descriptions.splice(index, 1);
+			this.statuses.splice(index, 1);
 		}
 		else {
-			this._tasks.push({ taskDescription: newTasks, taskStatus: TaskStatuses.TODO });
+			throw new Error(`Invalid index ${index}.`);
 		}
 	}
 
-	getDescriptions() {
-		const descriptions = this._tasks.map(task => { return task.taskDescription; });
-		return descriptions;
-	}
-
-	getStatuses() {
-		const statuses = this._tasks.map(task => { return task.taskStatus; });
-		return statuses;
-	}
-
-	getTaskStatusesAsBoolean() {
-		let formatedTasks = this.getStatuses();
-		formatedTasks = formatedTasks.map(status => {
-			if (status === TaskStatuses.TODO) {
-				return false;
-			}
-			else {
-				return true;
-			}
-		});
-		return formatedTasks;
-	}
-
-
-	/**
-	 * Deletes tasks at specified indices from the TODO list.
-	 *
-	 * @param {...number} indices - Indices of tasks to be deleted.
-	 * @throws {Error} Throws an error if an invalid index is provided.
-	 */
-	deleteTasks(...indices) {
-		// Sort the indices in descending order to avoid issues with changing array length during deletion
-		indices.sort((a, b) => b - a);
-
-		for (const index of indices) {
-			if (index >= 0 && index < this._tasks.length) {
-				// Delete the task at the given index
-				this._tasks.splice(index, 1);
-			}
-			else {
-				throw new Error(`Invalid index ${index}.`);
-			}
+	setDescription(description, index) {
+		if (typeof description !== 'string') {
+			throw new Error('description must be a string.');
+		}
+		if (index >= 0 && index < this.descriptions.length) {
+			this.descriptions[index] = description;
+		}
+		else {
+			throw new Error(`Invalid index ${index}.`);
 		}
 	}
 
-	/**
-	 * Sets the status of tasks at specified indices to "DONE".
-	 *
-	 * @param {...number} indices - Indices of tasks to be marked as done.
-	 * @throws {Error} Throws an error if an invalid index is provided.
-	 */
-	setTasksToDone(...indices) {
-		for (const index of indices) {
-			if (index >= 0 && index < this._tasks.length) {
-				// Set the task status to DONE at the given index
-				this._tasks[index].taskStatus = TaskStatuses.DONE;
-			}
-			else {
-				throw new Error(`Invalid index ${index}.`);
-			}
+	setStatus(status, index) {
+		if (typeof status !== 'boolean') {
+			throw new Error('status must be a boolean.');
 		}
-	}
-
-	/**
-	 * Sets the status of tasks at specified indices to "TODO".
-	 *
-	 * @param {...number} indices - Indices of tasks to be marked as undone.
-	 * @throws {Error} Throws an error if an invalid index is provided.
-	 */
-	UndoTasks(...indices) {
-		for (const index of indices) {
-			if (index >= 0 && index < this._tasks.length) {
-				// Set the task status to TODO at the given index
-				this._tasks[index].taskStatus = TaskStatuses.TODO;
-			}
-			else {
-				throw new Error(`Invalid index ${index}.`);
-			}
+		if (index >= 0 && index < this.statuses.length) {
+			this.statuses[index] = status;
 		}
-	}
-
-	/**
-	 * Sets the descriptions of tasks at specified indices.
-	 *
-	 * @param {...{index: number, description: string}} descriptions - Array of objects containing index and description for each task.
-	 * @throws {Error} Throws an error if an invalid index is provided.
-	 */
-	setDescriptions(... descriptions) {
-		for (const description of descriptions) {
-			this._tasks[description.index].taskDescription = description.description;
+		else {
+			throw new Error(`Invalid index ${index}.`);
 		}
 	}
 }
