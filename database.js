@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const { TODOList } = require('./templates/listTemplate.js');
 class Database {
 	constructor() {
 		this.sequelize = new Sequelize('database', 'user', 'password', {
@@ -55,19 +56,26 @@ class Database {
 		}
 	}
 
-	// async deleteTaskFromTODOList(tag, index) {
-	// 	if (tag instanceof 'string') {
-	// 		throw new Error('tag should be a string.');
-	// 	}
-	// 	const userList = await this.Lists.findOne({ where: { tag: tag } });
-	// 	const listData = JSON.parse(userList.list);
+	async deleteTaskFromTODOList(tag, index) {
+		if (typeof tag !== 'string') {
+			throw new Error('tag should be a string.');
+		}
+		const userList = await this.Lists.findOne({ where: { tag: tag } });
+		const listData = JSON.parse(userList['dataValues']['list']);
+		const listObj = new TODOList(listData.descriptions, listData.statuses);
+		listObj.deleteTask(index);
 
-	// 	// Reconstruct an instance of TODOList with parsed data
-	// 	const list = new TODOList(listData._tasks);
-	// 	// Call the deleteTasks method on the instance
-	// 	list.deleteTasks(index);
-	// 	await this.Lists.update({ list: JSON.stringify(list) }, { where: { tag: tag } });
-	// }
+		if (listObj.descriptions.length === 0) {
+			this.resetTODOList(tag);
+			const listStr = JSON.stringify(listObj);
+			return JSON.parse(listStr);
+		}
+		else {
+			const listStr = JSON.stringify(listObj);
+			await this.Lists.update({ list: listStr }, { where: { tag: tag } });
+			return JSON.parse(listStr);
+		}
+	}
 
 	async resetTODOList(tag) {
 		if (typeof tag !== 'string') {
@@ -76,57 +84,53 @@ class Database {
 		return await this.Lists.destroy({ where: { tag: tag } });
 	}
 
-	// async undoTask(tag, index) {
-	// 	const userList = await this.Lists.findOne({ where: { tag: tag } });
-	// 	const listData = JSON.parse(userList.list);
+	async undoTask(tag, index) {
+		if (typeof tag !== 'string') {
+			throw new Error('tag should be a string.');
+		}
+		const userList = await this.Lists.findOne({ where: { tag: tag } });
+		const listData = JSON.parse(userList['dataValues']['list']);
+		const listObj = new TODOList(listData.descriptions, listData.statuses);
+		listObj.setStatus(false, index);
 
-	// 	// Reconstruct an instance of TODOList with parsed data
-	// 	const list = new TODOList(listData._tasks);
-	// 	// Call the deleteTasks method on the instance
-	// 	list.UndoTasks(index);
-	// 	await this.Lists.update({ list: JSON.stringify(list) }, { where: { tag: tag } });
-	// }
+		const listStr = JSON.stringify(listObj);
+		await this.Lists.update({ list: listStr }, { where: { tag: tag } });
+		return JSON.parse(listStr);
+	}
 
-	// async modifyTaskDescriptionFromTODOList(tag, index, newDescription) {
-	// 	const userList = await this.Lists.findOne({ where: { tag: tag } });
-	// 	const listData = JSON.parse(userList.list);
+	async modifyTaskDescriptionFromTODOList(tag, index, newDescription) {
+		const userList = await this.Lists.findOne({ where: { tag: tag } });
+		const listData = JSON.parse(userList['dataValues']['list']);
+		const listObj = new TODOList(listData.descriptions, listData.statuses);
+		listObj.setDescription(newDescription, index);
+		const listStr = JSON.stringify(listObj);
+		await this.Lists.update({ list: listStr }, { where: { tag: tag } });
+		return JSON.parse(listStr);
+	}
 
-	// 	// Reconstruct an instance of TODOList with parsed data
-	// 	const list = new TODOList(listData._tasks);
-	// 	list.setDescriptions({ 'index': index, 'description': newDescription });
-	// 	await this.Lists.update({ list: JSON.stringify(list) }, { where: { tag: tag } });
-	// }
+	async setTaskToDone(tag, index) {
+		if (typeof tag !== 'string') {
+			throw new Error('tag should be a string.');
+		}
+		const userList = await this.Lists.findOne({ where: { tag: tag } });
+		const listData = JSON.parse(userList['dataValues']['list']);
+		const listObj = new TODOList(listData.descriptions, listData.statuses);
+		listObj.setStatus(true, index);
 
-	// async setTaskToDone(tag, index) {
-	// 	const userList = await this.Lists.findOne({ where: { tag: tag } });
-	// 	const listData = JSON.parse(userList.list);
+		const listStr = JSON.stringify(listObj);
+		await this.Lists.update({ list: listStr }, { where: { tag: tag } });
+		return JSON.parse(listStr);
+	}
 
-	// 	// Reconstruct an instance of TODOList with parsed data
-	// 	const list = new TODOList(listData._tasks);
-	// 	// Call the deleteTasks method on the instance
-	// 	list.setTasksToDone(index);
-	// 	await this.Lists.update({ list: JSON.stringify(list) }, { where: { tag: tag } });
-	// }
-
-	// async addTaskToTODOList(tag, description) {
-	// 	const userList = await this.Lists.findOne({ where: { tag: tag } });
-	// 	const listData = JSON.parse(userList.list);
-
-	// 	// Reconstruct an instance of TODOList with parsed data
-	// 	const list = new TODOList(listData._tasks);
-	// 	// Call the deleteTasks method on the instance
-	// 	list.addTasks(description);
-	// 	await this.Lists.update({ list: JSON.stringify(list) }, { where: { tag: tag } });
-	// }
-
-	// async getTODOList(tag) {
-	// 	const userList = await this.Lists.findOne({ where: { tag: tag } });
-	// 	const listData = JSON.parse(userList.list);
-
-	// 	// Reconstruct an instance of TODOList with parsed data
-	// 	const list = new TODOList(listData._tasks);
-	// 	return { 'descriptions': list.getDescriptions(), 'statuses': list.getStatuses() };
-	// }
+	async addTaskToTODOList(tag, description) {
+		const userList = await this.Lists.findOne({ where: { tag: tag } });
+		const listData = JSON.parse(userList['dataValues']['list']);
+		const listObj = new TODOList(listData.descriptions, listData.statuses);
+		listObj.addTask(description);
+		const listStr = JSON.stringify(listObj);
+		await this.Lists.update({ list: listStr }, { where: { tag: tag } });
+		return JSON.parse(listStr);
+	}
 
 	async getTODOList(tag) {
 		if (typeof tag !== 'string') {

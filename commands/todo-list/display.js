@@ -19,7 +19,7 @@ module.exports = {
 			if (isAlreadyInDB) {
 				try {
 					const list = await database.getTODOList(tag);
-					interaction.channel.send({ embeds: [createTODOListEmbed(interaction, list)] });
+					interaction.reply({ embeds: [createTODOListEmbed(interaction, list)] });
 				}
 				catch (error) {
 					await interaction.reply({ ephemeral: true, embeds: [createFailureEmbed(interaction, 'An error occurred while displaying your TODO list.')] });

@@ -24,9 +24,9 @@ exports.createTODOListEmbed = function(interaction, list) {
 		.setTitle('Todo List 🗒')
 		.setTimestamp()
 		.addFields({ name: `📆 ${interaction.user.username}'s tasks📌`, value: tasksToString(list.descriptions, list.statuses) })
-		.setAuthor({ name: 'Citronetto', iconURL: 'https://i.imgur.com/AfFp7pu.png' })
+		// .setAuthor({ name: 'Citronetto', iconURL: 'https://i.imgur.com/AfFp7pu.png' })
 		.setThumbnail(interaction.user.avatarURL())
-		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/cLjbtlk.gif' });
+		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/5PabqJZ.png' });
 	return TODOListEmbed;
 };
 
@@ -90,14 +90,25 @@ exports.createSuccessEmbed = function(interaction, customMessage) {
 		.setTimestamp()
 		.addFields({ name: interaction.user.username, value: customMessage })
 		.setThumbnail('https://i.imgur.com/kXQuYBm.gif')
-		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/cLjbtlk.gif' });
+		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/5PabqJZ.png' });
+	return embed;
+};
+
+exports.createFinishedTODOListEmbed = function(interaction) {
+	const embed = new EmbedBuilder()
+		.setColor('#9eff74')
+		.setTitle('Yeayyyyy you finished your TODO list!!! 🥳')
+		.setTimestamp()
+		.addFields({ name: interaction.user.username, value: 'Time to get a well deserved rest!' })
+		.setThumbnail('https://i.imgur.com/2ecEvUN.png')
+		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/5PabqJZ.png' });
 	return embed;
 };
 
 exports.TODOListCreatedSuccessEmbed = new EmbedBuilder()
 	.setColor('#9eff74')
 	.setTitle('Action successfull ✔️')
-	.setAuthor({ name: 'Citronetto', iconURL: 'https://i.imgur.com/AfFp7pu.png' })
+	// .setAuthor({ name: 'Citronetto', iconURL: 'https://i.imgur.com/AfFp7pu.png' })
 	.setDescription('You just created a TODO list! Congratulations! 🥳\n Bellow you will find a list of handy commands for your productivity journey.')
 	.setThumbnail('https://i.imgur.com/YDnia5V.gif')
 	.addFields(
@@ -107,7 +118,7 @@ exports.TODOListCreatedSuccessEmbed = new EmbedBuilder()
 		{ name: '`/modify`', value: 'Modify a task in your todo list.' },
 		{ name: '`/done`', value: 'Set a task as `done`.' },
 	)
-	.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/cLjbtlk.gif' });
+	.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/5PabqJZ.png' });
 
 exports.createFailureEmbed = function(interaction, customMessage) {
 	const embed = new EmbedBuilder()
@@ -116,7 +127,7 @@ exports.createFailureEmbed = function(interaction, customMessage) {
 		.setTimestamp()
 		.addFields({ name: interaction.user.username, value: customMessage })
 		.setThumbnail('https://i.imgur.com/VmAkw8Q.gif')
-		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/cLjbtlk.gif' });
+		.setFooter({ text: 'LemonSaltStudio©', iconURL: 'https://i.imgur.com/5PabqJZ.png' });
 	return embed;
 };
 

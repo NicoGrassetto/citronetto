@@ -1,11 +1,22 @@
 class TODOList {
-	constructor(tasks) {
-		if (!Array.isArray(tasks) || tasks.length === 0) {
-			throw new Error('TODO list must contain at least one task.');
+	constructor(descriptions, statuses) {
+		if (!Array.isArray(descriptions) || descriptions.length === 0) {
+			throw new Error('descriptions must contain at least one task.');
 		}
-
-		this.descriptions = tasks;
-		this.statuses = this.descriptions.map(() => false);
+		if (arguments.length === 1) {
+			this.descriptions = descriptions;
+			this.statuses = this.descriptions.map(() => false);
+		}
+		else if (arguments.length === 2) {
+			if (!Array.isArray(statuses) || statuses.length === 0) {
+				throw new Error('statuses must contain at least one task.');
+			}
+			this.descriptions = descriptions;
+			this.statuses = statuses;
+		}
+		else {
+			throw new Error('Argument error: must contain at least a descriptions array.');
+		}
 	}
 
 	addTask(taskDescription) {
